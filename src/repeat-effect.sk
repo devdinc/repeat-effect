@@ -1,10 +1,10 @@
 import:
-    ch.njol.skript.lang.Effect
+    ch.njol.skript.lang.Effect as REffect
 
 effect [repeat] <(.+)> (1:once|2:twice|3:thrice|4:%-number% times):
     parse:
         set {_a} to first element of regex-1
-        set {_repeat.sk::effect} to Effect.parse({_a}, "Can't understand effect: ")
+        set {_repeat.sk::effect} to REffect.parse({_a}, "Can't understand effect: ")
         continue
     trigger:
         set {_times} to expr-1
