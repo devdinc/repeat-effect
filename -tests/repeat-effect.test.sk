@@ -1,0 +1,4 @@
+test "repeat effect twice":
+    set {_count} to 0
+    repeat add 1 to {_count} twice
+    assert {_count} is 2 with "effect should execute twice"
